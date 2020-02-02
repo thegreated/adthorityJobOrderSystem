@@ -3,7 +3,7 @@
       <nav class="navbar align-items-stretch navbar-light bg-white flex-md-nowrap border-bottom p-0">
         <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
           <div class="d-table m-auto">
-            <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="images/shards-dashboards-logo.svg" alt="Shards Dashboard">
+            <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="{{ url('images/shards-dashboards-logo.svg') }}" alt="Shards Dashboard">
             <span class="d-none d-md-inline ml-1">Dashboard</span>
           </div>
         </a>
@@ -25,7 +25,7 @@
       <ul class="nav flex-column">
         
         <li class="nav-item">
-          <a class="nav-link active" href="index.html">
+          <a class="nav-link active" href="{{ url('dashboard') }}">
             <i class="material-icons">edit</i>
             <span>Dashboard</span>
           </a>
@@ -41,42 +41,27 @@
               </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse">
-              <div class="panel-body nav-link">Panel Body</div>
-              <div class="panel-footer nav-link">Panel Footer</div>
+              <div class="panel-body nav-link"> <a href="{{ url('project/pending/1') }}"> Pending </a></div>
+              <div class="panel-footer nav-link"><a href="{{ url('project/accepted/1') }}"> Accepted </a> </div>
+              <div class="panel-footer nav-link"><a href="{{ url('project/rejected/1') }}"> Rejected </a> </div>
+              <div class="panel-footer nav-link"><a href="{{ url('project/cancel/1') }}"> Cancel </a> </div>
             </div>
           </div>
         </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="add-new-post.html">
+          <a class="nav-link " href="{{ url('client') }}">
             <i class="material-icons">note_add</i>
-            <span>Add New Post</span>
+            <span>Clients</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="form-components.html">
+          <a class="nav-link " href="{{ url('report') }}">
             <i class="material-icons">view_module</i>
-            <span>Forms &amp; Components</span>
+            <span>Reports</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link " href="tables.html">
-            <i class="material-icons">table_chart</i>
-            <span>Tables</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="user-profile-lite.html">
-            <i class="material-icons">person</i>
-            <span>User Profile</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="errors.html">
-            <i class="material-icons">error</i>
-            <span>Errors</span>
-          </a>
-        </li>
+
       </ul>
     </div>
   </aside>

@@ -1,34 +1,38 @@
-@extends('layouts.app')
-
-@section('content')
-<div class="container">
-    <div class="row">
-        @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-              <!--  <a href="{{ route('register') }}">Register</a> -->
-            @endauth
-        </div>
-    @endif
-        <div class="col-md-8 col-md-offset-2">
-            
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+<!doctype html>
+<html lang="{{ app()->getLocale() }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Work Order Management System</title>
+      @include('templates.head')
+    
+    </head>
+    <body class="h-100">
+        <div class="container-fluid">
+            <div class="row">
+              <!-- Main Sidebar -->
+           @include('templates.leftmenu')
+              <!-- End Main Sidebar -->
+              <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
+               
+                  @include('templates.topnav')
+                
+                <!-- / .main-navbar -->
+                <div class="main-content-container container-fluid px-4">
+                  <!-- Page Header -->
+                  @include('templates.pageheader')
+                  <!-- End Page Header -->
+                  <!-- Small Stats Blocks -->
+                  @include('home.statistics')
+                  <!-- End Small Stats Blocks -->
+                  @include('home.charts')
                 </div>
+                @include('templates.footer')
+              </main>
+
             </div>
+          </div>
         </div>
-    </div>
-</div>
-@endsection
+        @include('templates.js')
+    </body>
+</html>

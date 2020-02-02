@@ -31,7 +31,7 @@
     <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
       <div class="card card-small h-100">
         <div class="card-header border-bottom">
-          <h6 class="m-0">Users by device</h6>
+          <h6 class="m-0">Clients</h6>
         </div>
         <div class="card-body d-flex py-0">
           <canvas height="220" class="blog-users-by-device m-auto"></canvas>
@@ -272,11 +272,11 @@
             </li>
           
             <li class="list-group-item d-flex px-3">
-              <span class="text-semibold text-fiord-blue">Reddit</span>
+              <span class="text-semibold text-fiord-blue">Denn Design</span>
               <span class="ml-auto text-right text-semibold text-reagent-gray">8,281</span>
             </li>
             <li class="list-group-item d-flex px-3">
-              <span class="text-semibold text-fiord-blue">The Next Web</span>
+              <span class="text-semibold text-fiord-blue">Sun Cruices</span>
               <span class="ml-auto text-right text-semibold text-reagent-gray">7,128</span>
             </li>
             <li class="list-group-item d-flex px-3">
@@ -284,11 +284,11 @@
               <span class="ml-auto text-right text-semibold text-reagent-gray">6,218</span>
             </li>
             <li class="list-group-item d-flex px-3">
-              <span class="text-semibold text-fiord-blue">YouTube</span>
+              <span class="text-semibold text-fiord-blue">Vans</span>
               <span class="ml-auto text-right text-semibold text-reagent-gray">1,218</span>
             </li>
             <li class="list-group-item d-flex px-3">
-              <span class="text-semibold text-fiord-blue">Adobe</span>
+              <span class="text-semibold text-fiord-blue">Data</span>
               <span class="ml-auto text-right text-semibold text-reagent-gray">827</span>
             </li>
           </ul>

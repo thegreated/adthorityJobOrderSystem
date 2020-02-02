@@ -12,12 +12,50 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+Route::get('/dashboard', function () {
+    return view('home');
+});
+
+Route::get('/project/pending/{id}', function () {
+    return view('project.pending');
+});
+
+Route::get('/project/accepted/{id}', function ($id) {
+    return view('project.accepted');
+});
+
+Route::get('/project/rejected/{id}', function ($id) {
+    return view('project.rejected');
+});
+
+Route::get('/project/cancel/{id}', function ($id) {
+    return view('project.cancel');
+});
+
+Route::get('/client', function () {
+    return view('client.show');
+});
+
+Route::get('/report', function () {
+    return view('report.show');
+});
+
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Route::group([
+//     'prefix' => 'projects'
+// ],function(){
+//     Route::get('/','ProjectController@getHome');
+//     Route::get('pending','ProjectController@getPending');
+//     Route::get('accept','ProjectController@getAccept');
+//     Route::get('cancel','ProjectController@getCancel');
+//     Route::get('reject','ProjectController@getReject');
+
+// });
 

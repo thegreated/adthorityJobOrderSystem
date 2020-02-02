@@ -20,12 +20,11 @@
                 <!-- / .main-navbar -->
                 <div class="main-content-container container-fluid px-4">
                   <!-- Page Header -->
+                  
                   @include('templates.pageheader')
                   <!-- End Page Header -->
                   <!-- Small Stats Blocks -->
-                  @include('home.statistics')
-                  <!-- End Small Stats Blocks -->
-                  @include('home.charts')
+                 
                 </div>
                 @include('templates.footer')
               </main>

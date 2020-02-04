@@ -22,12 +22,11 @@ class CreateProjectsTable extends Migration
             $table->longText('description');
             $table->integer('purchase_order_id');
             $table->integer('job_order_id');
-            $table->date('created_at');
-            $table->date('updated_at');
-            $table->foreign('image_id')->references('id')->on('images');
-            $table->foreign('company_id')->references('id')->on('companies');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->timestamps();
+
+//            $table->foreign('image_id')->references('id')->on('images');
+        // $table->foreign('company_id')->references('id')->on('companies');
+         //  $table->foreign('user_id')->references('id')->on('users');
+         //  $table->timestamps();
         });
     }
 

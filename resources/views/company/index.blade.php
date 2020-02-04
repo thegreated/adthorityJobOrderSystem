@@ -26,7 +26,7 @@
                   <!-- Small Stats Blocks -->
                   <div class="card card-small mb-4">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Clients  &nbsp; <button type="submit" class="btn btn-info">Add </button></h6> 
+                    <h6 class="m-0">Clients  &nbsp; <a  href="{{ url('client/create') }}" class="btn btn-info">Add </a></h6> 
                   </div>
                   <div class="card-body p-0 pb-3 text-center">
                     <table class="table mb-0">
@@ -41,31 +41,20 @@
                         </tr>
                       </thead>
                       <tbody>
+                      @foreach($clients as $rows )
                         <tr>
-                          <td>C-1</td>
-                          <td>Herbalife </td>
-                          <td>BGC Makati City</td>
-                          <td> Description </td>
+                         <td> {{ $rows['id'] }} </td>
+                          <td> {{ $rows['name'] }} </td>
                           <td>0756586532</td>
+                          <td> {{ $rows['contact'] }}</td>
+                          <td>  {{ $rows['description'] }} </td>
+                        
                           <td>
                           <button type="submit" class="btn btn-info">Edit</button>
                           <button type="submit" class="btn btn-danger">Delete</button>
                           </td>
-                          </td>
-                        </tr>
-                        <tr>
-                        <td>C-2</td>
-                          <td>Denn Design </td>
-                          <td>Valenquela city</td>
-                          <td> Description </td>
-                          <td>075623232</td>
-                          <td>
-                          <button type="submit" class="btn btn-info">Edit</button>
-                          <button type="submit" class="btn btn-danger">Delete</button>
-                          </td>
-                          </td>
-                        </tr>
-                  
+                        </tr>   
+                        @endforeach         
                       </tbody>
                     </table>
                   </div>

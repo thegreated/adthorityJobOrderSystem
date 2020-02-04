@@ -34,9 +34,7 @@ Route::get('/project/cancel/{id}', function ($id) {
     return view('project.cancel');
 });
 
-Route::get('/client', function () {
-    return view('client.show');
-});
+Route::resource('/client', 'CompanyController');
 
 Route::get('/report', function () {
     return view('report.show');

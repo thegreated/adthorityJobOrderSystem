@@ -23,10 +23,10 @@ class CreateProjectListsTable extends Migration
             $table->integer('width');
             $table->string('particular');
             $table->longText('note');
-            $table->foreign('finishing_id')->references('id')->on('finishings');
-            $table->foreign('others_id')->references('id')->on('others');
-            $table->foreign('media_id')->references('id')->on('medias');
-            $table->foreign('project_id')->references('id')->on('projects');
+        //    $table->foreign('finishing_id')->references('id')->on('finishings');
+         //   $table->foreign('others_id')->references('id')->on('others');
+          //  $table->foreign('media_id')->references('id')->on('medias');
+          //  $table->foreign('project_id')->references('id')->on('projects');
             $table->timestamps();
         });
     }
